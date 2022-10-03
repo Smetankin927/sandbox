@@ -22,6 +22,12 @@ int main(int argc, char *argv[])
     Board * board = new Board(sceneWidth/2-boardWidth/2,sceneHeigth/2-boardHeight/2);
     scene->addItem(board);
     board->boardShowCells();
+
+    //
+    board->CellPointers[2][3]->showFigure();
+
+
+
     //add view
     QGraphicsView * view = new QGraphicsView(scene);
     //delete scrollbar

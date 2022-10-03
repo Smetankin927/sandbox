@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     Board.cpp \
     Cell.cpp \
+    Figure.cpp \
     Peshka.cpp \
     main.cpp
 
@@ -18,6 +19,7 @@ HEADERS += \
     Board.h \
     Cell.h \
     ENUMS.h \
+    Figure.h \
     Peshka.h
 
 FORMS +=

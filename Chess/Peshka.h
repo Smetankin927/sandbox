@@ -1,3 +1,4 @@
+#pragma once
 #ifndef PESHKA_H
 #define PESHKA_H
 #include "Cell.h"
@@ -5,9 +6,9 @@
 //#include "ENUMS.h"
 class Peshka : public Figure {
 public:
-    Peshka(Cell& board) : Figure(PESHKA, board, x,y) {}
+    Peshka(Cell& board) : Figure(PESHKA,x,y) {}
 
-    void Move() override{};
+    //void Move() override{};
 
 private:
     qreal x;
@@ -15,7 +16,7 @@ private:
     Сhessmen type_;
 
 
-    virtual void UpdateAllowedPosition() override{};
+   void UpdateAllowedPosition() {};
 
 };
 #endif // PESHKA_H
