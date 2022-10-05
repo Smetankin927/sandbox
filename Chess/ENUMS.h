@@ -2,11 +2,29 @@
 
 #ifndef ENUMS_H
 #define ENUMS_H
+#include <QGraphicsRectItem>
+
+struct placeINT //позиция ячейки
+{
+    int x;
+    int y;
+};
+
+
 
 enum Colors
 {
     WHITE,
     BLACK
+};
+enum Сhessmen{
+    PESHKA,
+    CASTLE,
+    HORSE,
+    BISHOP,
+    QUEEN,
+    KING
+
 };
 
 enum Labels{
@@ -20,9 +38,6 @@ enum Labels{
     H
 };
 
-enum Сhessmen{
-    PESHKA,
-    NOTFIRST
-};
+
 
 #endif // ENUMS_H

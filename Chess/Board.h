@@ -4,9 +4,6 @@
 
 #define boardEdge 50
 #define boardHeight 900
-
-
-
 #define cellNums 8
 #define boardWidth  900
 #define boardXPosition 0
@@ -17,17 +14,13 @@
 
 class Board:public QGraphicsRectItem{
 public:
+    Board();
     Board(qreal x, qreal y);
 
-    void boardShowCells();
+    void showCells();
+    void setCells();
     Cell* CellPointers[cellNums][cellNums];
 private:
-    qreal height;
-    qreal width;
-    qreal ax;
-    qreal ay;
-
-
 
 };
 

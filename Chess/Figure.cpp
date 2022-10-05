@@ -1,26 +1,39 @@
 #include "Figure.h"
+#include<QDebug>
+#include <QEvent>
+#include <QMouseEvent>
+#include <ENUMS.cpp>
 
-
-                                            // для использования find(begin, end, element)
-                                            // ind(begin(cont), end(cont), placeFigure {6,5}) != end(cont) -- correct
-                                            //как работает QSet?? find()???
-bool operator == (const placeFigure& lhs, const placeFigure& rhs)
+Figure::Figure(const Сhessmen& type, qreal x, qreal y)
 {
-if(lhs.x == rhs.x && lhs.y == rhs.y) {return true;}
-else {return false;}
-}
-
-                                            //оператор для создания множества set<..> оно упорядочено
-                                            //в unordered надо прописывать хеш функцию
-bool operator < (const placeFigure& lhs, const placeFigure& rhs)
-{
-if(lhs.x < rhs.x || lhs.y <rhs.y) {return true;}
-else {return false;}
-}
-
-Figure::Figure(const Сhessmen &type, qreal x, qreal y)
-{
-    //drew the cell
+    //drew the figure
     setRect(0,0,figureWidth,figureHeight);
     this->setPos(x, y);
+}
+
+Figure::Figure(const Сhessmen& type,const Colors color,Board* board,placeINT position)
+{
+    Cell * cell = board->CellPointers[position.x][position.y];
+    //drew the figure with cell
+    setRect(0,0,figureWidth,figureHeight);
+    this->setPos((cell->x())+(cellWidth-figureWidth)/2,(cell->y())+(cellHeight-figureHeight)/2);
+
+}
+
+void Figure::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    qDebug()<<"good";
+
+
+}
+
+void Figure::showAllowed()
+{
+
+}
+
+
+void Figure::updateAllowPosition()
+{
+
 }

@@ -8,15 +8,16 @@
 #include <QGraphicsRectItem>
 #include "ENUMS.h"
 
-
 class Cell:public QGraphicsRectItem{
 public:
-    Cell(qreal x, qreal y);
+    Cell(qreal x, qreal y, placeINT place);
     void showFigure();
     bool is_free();
 private:
-    Colors color;
+
+    placeINT place_;
     bool freestatus;
+
 
 };
 #endif // CELL_H
